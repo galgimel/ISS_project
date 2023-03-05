@@ -22,7 +22,7 @@ public class ISSController {
 
     @GetMapping("/now")
     public String showIssLocation(final Model model) {
-        model.addAttribute("issLocation", issService.getIssLocation());
+        model.addAttribute("ISS", issService.getIssLocation());
         return "/ISS-profile";
     }
 }

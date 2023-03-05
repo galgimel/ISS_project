@@ -8,12 +8,12 @@
 <h1 th:text="'Thats where ISS now:'"></h1>
 <table>
     <tr>
-        <td>Longitude:</td>
-        <td><p th:text="${issLocation.getIss_position().longitude}"/></td>
+        <td>Latitude:</td>
+        <td><p th:text="${ISS.getIssPosition().get('latitude')}"/></td>
     </tr>
     <tr>
-        <td>Latitude:</td>
-        <td><p th:text="${issLocation.getIss_position().latitude}"/></td>
+        <td>Longitude:</td>
+        <td><p th:text="${ISS.getIssPosition().get('longitude')}"/></td>
     </tr>
 </table>
 <br>

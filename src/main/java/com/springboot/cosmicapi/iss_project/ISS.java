@@ -1,22 +1,18 @@
 package com.springboot.cosmicapi.iss_project;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
+import java.util.Map;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class ISS {
-    private IssPosition iss_position;
-
-    public class IssPosition {
-        public String longitude;
-        public String latitude;
-    }
+    @JsonProperty("iss_position")
+    private Map<String, String> IssPosition;
 }
-
