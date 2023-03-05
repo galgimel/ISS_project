@@ -6,13 +6,13 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Map;
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ISS {
-    @JsonProperty("iss_position")
-    private ISSPosition issPosition;
+public class ISSPosition {
+    @JsonProperty("latitude")
+    private String latitude;
+    @JsonProperty("longitude")
+    private String longitude;
 }
