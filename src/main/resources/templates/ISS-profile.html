@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1 th:text="'Thats where ISS now:'"></h1>
+<table>
+    <tr>
+        <td>Longitude:</td>
+        <td><p th:text="${ISS.getIssPosition().getLongitude()}"/></td>
+    </tr>
+    <tr>
+        <td>Latitude:</td>
+        <td><p th:text="${ISS.getIssPosition().getLatitude()}"/></td>
+    </tr>
+</table>
+<br>
+<hr>
+<input type="button" value="Main Page"
+       onclick="window.location.href = '/iss_location'"/>
+</body>
+</html>
