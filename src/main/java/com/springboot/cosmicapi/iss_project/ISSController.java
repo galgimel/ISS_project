@@ -17,12 +17,12 @@ public class ISSController {
 
     @GetMapping
     public String showFrontPage() {
-        return "/front-page";
+        return "front-page";
     }
 
     @GetMapping("/now")
     public String showIssLocation(final Model model) {
         model.addAttribute("ISS", issService.getIssLocation());
-        return "/ISS-profile";
+        return "ISS-profile";
     }
 }

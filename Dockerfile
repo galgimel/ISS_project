@@ -1,11 +1,5 @@
-FROM openjdk:11
-COPY . /java
-WORKDIR /java
-EXPOSE 80
+FROM adoptopenjdk/openjdk11:alpine-jre
+EXPOSE 8080
+ADD build/libs/ISS_project-0.0.1-SNAPSHOT.jar ISS_project-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "/ISS_project-0.0.1-SNAPSHOT.jar"]
 
-#RUN javac IssProjectApplication.java
-#CMD [ "java", "IssProjectApplication"]
-
-#ARG JAR_FILE=gradle/wrapper/gradle-wrapper.jar
-#COPY ${JAR_FILE} gradle-wrapper.jar
-#ENTRYPOINT ["java", "-jar", "/gradle-wrapper.jar"]
